@@ -25,7 +25,7 @@
 ### 2. 상세설계
 #### 2.1. 시스템 구성도
 #### □ 전체 구성도</br>
-<img width="850" alt="스크린샷 2024-10-23 오전 10 34 29" src="https://github.com/user-attachments/assets/72cea8cf-968e-4e15-83e1-a7a67c20b514">
+<img width="850" alt="시스템 구성도" src="./images/architecture.png">
 </br></br>
 
   > - 각 클라우드 인스턴스는 도커 컨테이너로 애플리케이션을 구동하며, 컨테이너에서 생성된 로그는 Filebeat가 수집해 Logstash로 전송 후 전처리.
@@ -36,7 +36,7 @@
 </br>
 
 #### □ 로그 데이터 관리 </br>
-<img width="750" alt="스크린샷 2024-10-23 오전 10 35 26" src="https://github.com/user-attachments/assets/cd196693-4ca1-414a-a6a0-1f58117d6e45">
+<img width="750" alt="로그 데이터 관리" src="./images/log_file_manage.png">
 </br>
 
   > - 모든 로그 데이터를 그대로 저장하는 대신, 시간대별로 요약하여 주요 이벤트만 축적하는 방식으로 관리.
@@ -44,7 +44,7 @@
 </br>
 
 #### □ 토큰 한계를 해결하는 대화 맥락 유지 </br>
-<img width="600" alt="스크린샷 2024-10-23 오후 12 36 19" src="https://github.com/user-attachments/assets/16a47101-4197-47c2-ad73-476b76385419">
+<img width="600" alt="대화 맥락 유지" src="./images/token_management.png">
 </br>
 
   > - 대화가 일정량 이상 누적될 때마다 시스템이 이전 대화를 요약하여 프롬프트에 포함.
