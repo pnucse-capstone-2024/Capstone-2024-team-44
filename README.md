@@ -96,7 +96,9 @@ docker compose up -d
 </br>
 
 ### 4. 소개 및 시연 영상
-> 프로젝트에 대한 소개와 시연 영상을 넣으세요.
+<a href="https://www.youtube.com/watch?v=EM1icrt529k&list=PLFUP9jG-TDp-CVdTbHvql-WoADl4gNkKj&index=43">
+  <img src="./images/with_play_button.png" alt="프로젝트 소개 영상" width="500"/>
+</a>
 </br>
 
 ### 5. 팀 소개
