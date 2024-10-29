@@ -86,7 +86,8 @@ docker compose up -d
 ```
 
 #### □ 모니터링 서비스 설치 </br>
-> Requirements: Docker, Docker Compose </br>
+> Requirements: Docker, Docker Compose, OpenAI Key </br>
+> (OpenAI 키가 있어야 정상적으로 서비스를 이용할 수 있습니다)
 ```bash
 git clone https://github.com/pnucse-capstone-2024/Capstone-2024-team-44.git
 cd Capstone-2024-team-44
@@ -95,11 +96,39 @@ docker compose up -d
 ```
 </br>
 
+
 ### 4. 소개 및 시연 영상
+#### □ 소개 </br>
+|로그인|회원가입(3단계 중 2단계, 클라우드 등록)|
+|:--:|:--:|
+|<img width="500" alt="로그인" src="./images/로그인.png">|<img width="500" alt="회원가입" src="./images/회원가입.png">|
+
+|대시보드|검색|
+|:--:|:--:|
+|<img width="500" alt="대시보드" src="./images/대시보드.png">|<img width="500" alt="검색" src="./images/검색.png">|
+
+|프로젝트 목록|프로젝트 상세조회|
+|:--:|:--:|
+|<img width="500" alt="프로젝트 목록" src="./images/프로젝트.png">|<img width="500" alt="프로젝트 상세조회" src="./images/로그 개요.png">|
+
+|로그 조회|로그 요약|
+|:--:|:--:|
+|<img width="500" alt="로그 조회" src="./images/로그 조회.png">|<img width="500" alt="로그 요약" src="./images/로그 요약.png">|
+
+|질문하기|원격 SSH 명령|
+|:--:|:--:|
+|<img width="500" alt="질문하기" src="./images/질문.png">|<img width="500" alt="원격 SSH 명령" src="./images/커맨드.png">|
+
+|인사이트(성능요약, 일일요약) |인사이트(주간 요약, 추천)|
+|:--:|:--:|
+|<img width="500" alt="인사이트 1" src="./images/인사이트 1.png">|<img width="500" alt="인사이트 2" src="./images/인사이트 2.png">|
+
+#### □ 영상 </br>
 <a href="https://www.youtube.com/watch?v=EM1icrt529k&list=PLFUP9jG-TDp-CVdTbHvql-WoADl4gNkKj&index=43">
   <img src="./images/with_play_button.png" alt="프로젝트 소개 영상" width="500"/>
 </a>
-</br>
+</br></br>
+
 
 ### 5. 팀 소개
 
