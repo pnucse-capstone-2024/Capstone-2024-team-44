@@ -1,0 +1,48 @@
+version: '3'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.3
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m -Duser.timezone=Asia/Seoul
+    ports:
+      - "9200:9200"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.17.3
+    container_name: logstash
+    volumes:
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - "5044:5044"  # Logstash가 로그를 수신할 포트
+    depends_on:
+      - elasticsearch
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.17.3
+    container_name: filebeat
+    user: root
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
+    depends_on:
+      - logstash
+
+  #kibana:
+  #  image: docker.elastic.co/kibana/kibana:7.17.3
+  #  container_name: kibana
+  #  environment:
+  #    - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+  #    - xpack.security.encryptionKey="6f8c9a1b32a94e0d91d12e57f5c0845a"
+  #    - xpack.encryptedSavedObjects.encryptionKey="9a73bc9d86a24828b4820dc5a156d3fd"
+  #  ports:
+  #    - "5601:5601"
+  #  depends_on:
+  #    - elasticsearch
+
+volumes:
+  es_data:

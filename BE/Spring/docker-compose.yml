@@ -1,0 +1,58 @@
+networks:
+  network:
+    driver: bridge
+
+services:
+  redis:
+    image: "redis:7.0"
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - network
+
+  mysql:
+    image: "mysql:8.0"
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      TZ: Asia/Seoul
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_ROOT_PASSWORD: 0623
+      MYSQL_DATABASE: LLMN
+    volumes:
+      - /Users/lhh/mysql_data:/var/lib/mysql
+    networks:
+      - network
+
+  spring:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spring
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/lib/ssh_data:/ssh
+      - /var/lib/llmn_logs:/logs
+    networks:
+      - network
+    depends_on:
+      - mysql
+      - redis
+
+  fastapi:
+    build:
+      context: ./FastAPI
+      dockerfile: Dockerfile
+    container_name: fastapi
+    ports:
+      - "8000:8000"
+    volumes:
+      - /var/lib/llmn_logs:/project/logs
+    networks:
+      - network
+    depends_on:
+      - spring
