@@ -1,0 +1,91 @@
+.react-terminal-wrapper {
+  padding: 45px 0px 15px 20px !important;
+  height: 100%;
+  /* background-color: rgb(47, 52, 61) !important; */
+  /* border-radius: 16px !important; */
+}
+
+div[data-terminal-name="LLMN Terminal"] {
+  font-size: 18px;
+}
+
+.react-terminal-wrapper .react-terminal-window-buttons {
+  display: none;
+}
+
+.react-terminal-wrapper .react-terminal {
+  font-size: 16px !important; /* 기본 폰트 크기 */
+  height: 100% !important;
+}
+
+.react-terminal-wrapper.react-terminal-light {
+  background-color: #f7f7f7 !important;
+}
+
+.react-terminal-wrapper
+  .react-terminal
+  .react-terminal-line.react-terminal-input.react-terminal-active-input::before {
+  color: #32cd32 !important;
+  font-weight: bold;
+}
+
+.react-terminal-wrapper
+  .react-terminal
+  .react-terminal-line.react-terminal-input.react-terminal-active-input
+  .cursor {
+  background-color: #c0c0c0;
+  width: 4px !important;
+}
+
+.react-terminal-wrapper.react-terminal-light
+  .react-terminal
+  .react-terminal-line.react-terminal-input.react-terminal-active-input::before {
+  color: rgb(215, 109, 119) !important;
+}
+
+/* 화면이 640px 이하일 때 */
+@media (max-width: 640px) {
+  div[data-terminal-name="LLMN Terminal"] {
+    font-size: 16px;
+  }
+  .react-terminal-wrapper {
+    padding: 40px 0px 10px 15px !important;
+  }
+  .react-terminal-wrapper .react-terminal {
+    font-size: 14px !important;
+  }
+}
+
+/* 화면이 450px 이하일 때 */
+@media (max-width: 450px) {
+  div[data-terminal-name="LLMN Terminal"] {
+    font-size: 14px;
+  }
+  .react-terminal-wrapper {
+    padding: 35px 0px 5px 10px !important;
+  }
+  .react-terminal-wrapper .react-terminal {
+    font-size: 12px !important;
+  }
+}
+
+.react-terminal-wrapper .react-terminal {
+  overflow-y: auto; /* 세로 스크롤 활성화 */
+  scrollbar-width: thin; /* Firefox 스크롤바 두께 */
+  scrollbar-color: #888 transparent; /* 스크롤바 색상 (Firefox) */
+}
+
+/* Chrome, Edge, Safari용 스크롤바 스타일 */
+.react-terminal-wrapper .react-terminal::-webkit-scrollbar {
+  width: 8px; /* 스크롤바 너비 */
+}
+
+.react-terminal-wrapper .react-terminal::-webkit-scrollbar-track {
+  background: transparent; /* 스크롤 트랙 색상 */
+}
+
+.react-terminal-wrapper .react-terminal::-webkit-scrollbar-thumb {
+  background-color: #888; /* 스크롤바 색상 */
+  border-radius: 4px; /* 둥근 모서리 */
+  border: 2px solid #e0e0e0; /* 스크롤바 안쪽 테두리 */
+}

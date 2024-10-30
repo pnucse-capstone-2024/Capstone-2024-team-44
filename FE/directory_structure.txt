@@ -1,0 +1,179 @@
+.
+├── .env.local
+├── .eslintrc.json
+├── .gitignore
+├── README.md
+├── api
+│   ├── dashboard
+│   │   └── dashboard-api.ts
+│   ├── insight
+│   │   └── insight-api.ts
+│   ├── login
+│   │   ├── email-check.ts
+│   │   ├── instance-check.ts
+│   │   ├── login-check.ts
+│   │   ├── nickname-check.ts
+│   │   └── open-ai-key-check.ts
+│   ├── new-item
+│   │   └── new-item-api.ts
+│   └── project
+│       └── project-api.ts
+├── components
+│   ├── commons
+│   │   ├── button-large.tsx
+│   │   ├── button-small.tsx
+│   │   ├── confirm-modal.tsx
+│   │   ├── container.tsx
+│   │   ├── dropdown-menu.tsx
+│   │   ├── empty-box.tsx
+│   │   ├── header.tsx
+│   │   ├── input-small.tsx
+│   │   ├── input-with-dropdown.tsx
+│   │   ├── input.tsx
+│   │   ├── instance-modal.tsx
+│   │   ├── instance-validation-modal.tsx
+│   │   ├── layout.tsx
+│   │   ├── logo.tsx
+│   │   ├── sidebar.tsx
+│   │   └── toggle-button.tsx
+│   ├── dashboard
+│   │   ├── cloud-list-modal.tsx
+│   │   └── multi-line-chart.tsx
+│   ├── login
+│   │   └── instance-list.tsx
+│   ├── project
+│   │   ├── chatbot-modal.tsx
+│   │   ├── log-file-modal.tsx
+│   │   └── project-table.tsx
+│   └── search
+│       ├── insight-record-container.tsx
+│       ├── insight-record-modal.tsx
+│       ├── insight-record.tsx
+│       ├── log-file-container.tsx
+│       ├── log-file.tsx
+│       └── search-input.tsx
+├── directory_structure.txt
+├── hooks
+│   ├── commons
+│   │   ├── use-confirm-modal.ts
+│   │   ├── use-instance-check.ts
+│   │   ├── use-instance-modal.ts
+│   │   ├── use-is-mobile.ts
+│   │   ├── use-open-ai-key-check.ts
+│   │   ├── use-project-info-input.tsx
+│   │   ├── use-ssh-infos.ts
+│   │   └── use-toggle-button.ts
+│   ├── login
+│   │   ├── use-email-check.ts
+│   │   ├── use-login-check.ts
+│   │   ├── use-nickname-check.ts
+│   │   ├── use-password-check.ts
+│   │   └── use-timer.ts
+│   ├── project
+│   │   ├── use-chatbot-modal.ts
+│   │   └── use-log-file-modal.ts
+│   └── search
+│       └── use-insight-record-modal.ts
+├── libs
+│   ├── class-utils.ts
+│   ├── ip-utils.ts
+│   ├── timer-utils.ts
+│   └── validation-utils.ts
+├── next-env.d.ts
+├── next.config.mjs
+├── package.json
+├── pages
+│   ├── _app.tsx
+│   ├── _document.tsx
+│   ├── dashboard
+│   │   └── index.tsx
+│   ├── insight
+│   │   └── index.tsx
+│   ├── login
+│   │   ├── find-account-step1.tsx
+│   │   ├── find-account-step2.tsx
+│   │   ├── index.tsx
+│   │   ├── signup-step1.tsx
+│   │   ├── signup-step2.tsx
+│   │   ├── signup-step3.tsx
+│   │   ├── signup-step4.tsx
+│   │   └── signup-step5.tsx
+│   ├── new-item
+│   │   └── index.tsx
+│   ├── project
+│   │   ├── [id]
+│   │   │   ├── edit.tsx
+│   │   │   ├── index.tsx
+│   │   │   ├── log
+│   │   │   │   └── [file].tsx
+│   │   │   └── summary.tsx
+│   │   └── index.tsx
+│   ├── search
+│   │   └── index.tsx
+│   └── setting
+│       ├── api-key.tsx
+│       ├── index.tsx
+│       └── license.tsx
+├── postcss.config.mjs
+├── public
+│   ├── favicon.ico
+│   └── images
+│       ├── add-1.svg
+│       ├── add.svg
+│       ├── alarm.svg
+│       ├── arrow-right.svg
+│       ├── back.svg
+│       ├── chatbot.svg
+│       ├── check.svg
+│       ├── checkbox.svg
+│       ├── chevron-down.svg
+│       ├── chevron-right.svg
+│       ├── download.svg
+│       ├── ellipsis-vertical.svg
+│       ├── empty-dashboard.svg
+│       ├── empty.svg
+│       ├── graph.png
+│       ├── info.svg
+│       ├── insight.svg
+│       ├── log-file.svg
+│       ├── log.svg
+│       ├── logo.svg
+│       ├── logout.svg
+│       ├── menu.svg
+│       ├── minus.svg
+│       ├── not-working.svg
+│       ├── profile.svg
+│       ├── rotate-right.svg
+│       ├── search.svg
+│       ├── setting.svg
+│       ├── shell.svg
+│       ├── upload.svg
+│       └── working.svg
+├── ssr
+│   ├── dashboard
+│   │   └── dashboard-ssr.ts
+│   ├── insight
+│   │   └── insight-ssr.ts
+│   ├── new-item
+│   │   └── new-item-ssr.ts
+│   └── project
+│       ├── project-detail.ts
+│       ├── project-message.ts
+│       ├── project-ssr.ts
+│       └── project-summary.ts
+├── styles
+│   ├── custom-calendar.css
+│   └── globals.css
+├── tailwind.config.ts
+├── tsconfig.json
+└── types
+    ├── dashboard
+    │   └── dashboard-type.ts
+    ├── insight
+    │   └── insight-type.ts
+    ├── new-item
+    │   └── new-item-type.ts
+    └── project
+        └── project-type.ts
+
+42 directories, 135 files

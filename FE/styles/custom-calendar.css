@@ -1,0 +1,105 @@
+/* 기본 캟린덜 레이아웃 스타일 */
+.react-calendar.custom-calendar {
+  @apply w-full mx-auto bg-white rounded-xl border-0;
+}
+.react-calendar.custom-calendar button {
+  @apply hover:bg-gray-100 rounded-full;
+}
+
+/* 캘린더 네비게이션 스타일 */
+.react-calendar.custom-calendar .react-calendar__navigation {
+  @apply mb-1 grid grid-cols-10 px-2 gap-2;
+}
+.react-calendar.custom-calendar .react-calendar__navigation button {
+  @apply min-w-0 rounded-full focus:bg-white;
+}
+.react-calendar.custom-calendar .react-calendar__navigation__label {
+  @apply text-[18px] xs:text-[20px] font-bold px-1 col-span-6 pointer-events-none;
+}
+.react-calendar.custom-calendar
+  .react-calendar__navigation__arrow.react-calendar__navigation__prev2-button,
+.react-calendar.custom-calendar
+  .react-calendar__navigation__arrow.react-calendar__navigation__prev-button,
+.react-calendar.custom-calendar
+  .react-calendar__navigation__arrow.react-calendar__navigation__next-button,
+.react-calendar.custom-calendar
+  .react-calendar__navigation__arrow.react-calendar__navigation__next2-button {
+  @apply col-span-1 text-[20px] text-gray-300 font-extralight bg-white hover:bg-white hover:text-black hover:font-bold;
+}
+
+/* 캘린더 요일 스타일 */
+.react-calendar__month-view__days {
+  @apply text-[18px] xs:text-[20px] font-medium;
+}
+.react-calendar__month-view__weekdays__weekday {
+  @apply flex flex-row justify-center items-center text-black text-[17px] font-semibold aspect-square;
+}
+.react-calendar__month-view__weekdays__weekday:nth-child(7) {
+  @apply text-blue-500;
+}
+.react-calendar__month-view__weekdays__weekday:nth-child(1) {
+  @apply text-red-500;
+}
+.react-calendar__month-view__weekdays__weekday abbr {
+  @apply no-underline;
+}
+
+/* 캘린더 날짜 스타일 */
+.react-calendar__tile.react-calendar__month-view__days__day {
+  @apply text-black aspect-square;
+}
+.react-calendar__tile.react-calendar__month-view__days__day.react-calendar__month-view__days__day--neighboringMonth {
+  @apply text-gray-400 hover:text-gray-400;
+}
+.react-calendar__tile.react-calendar__tile--now.react-calendar__month-view__days__day {
+  @apply text-white bg-black hover:text-white hover:bg-black;
+}
+
+/* 캘린더 종료일 선택 후 시작일 선택 (호버) */
+.react-calendar__tile.react-calendar__tile--hover.react-calendar__tile--hoverStart.react-calendar__month-view__days__day {
+  @apply text-white bg-gray-300 rounded-tl-full rounded-tr-none rounded-bl-full rounded-br-none;
+}
+.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__tile--hover.react-calendar__tile--hoverEnd.react-calendar__month-view__days__day {
+  @apply text-white bg-gray-300 rounded-tl-none rounded-tr-full rounded-bl-none rounded-br-full;
+}
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--hover.react-calendar__tile--hoverStart.react-calendar__month-view__days__day,
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__tile--hover.react-calendar__tile--hoverEnd.react-calendar__month-view__days__day {
+  @apply text-white bg-black;
+}
+
+/* 캘린더 시작일 선택 후 종료일 선택 (호버) */
+.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__tile--hover.react-calendar__tile--hoverStart.react-calendar__month-view__days__day {
+  @apply text-white bg-gray-300 rounded-tl-full rounded-tr-none rounded-bl-full rounded-br-none;
+}
+.react-calendar__tile.react-calendar__tile--hover.react-calendar__month-view__days__day {
+  @apply text-black bg-gray-100 rounded-none;
+}
+.react-calendar__tile.react-calendar__tile--hover.react-calendar__tile--hoverEnd.react-calendar__month-view__days__day {
+  @apply text-white bg-gray-300 rounded-tl-none rounded-tr-full rounded-bl-none rounded-br-full;
+}
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__tile--hover.react-calendar__tile--hoverStart.react-calendar__month-view__days__day,
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--hover.react-calendar__month-view__days__day,
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--hover.react-calendar__tile--hoverEnd.react-calendar__month-view__days__day {
+  @apply text-white bg-black;
+}
+
+/* 캘린더 시작일, 종료일 포함하는 기간 선택 */
+.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day {
+  @apply text-white bg-gray-300 rounded-full;
+}
+.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__month-view__days__day {
+  @apply text-white bg-gray-300 rounded-tl-full rounded-tr-none rounded-bl-full rounded-br-none;
+}
+.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__month-view__days__day {
+  @apply text-black bg-gray-100 rounded-none;
+}
+.react-calendar__tile.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeEnd.react-calendar__month-view__days__day {
+  @apply text-white bg-gray-300 rounded-tl-none rounded-tr-full rounded-bl-none rounded-br-full;
+}
+
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__tile--rangeEnd.react-calendar__tile--rangeBothEnds.react-calendar__month-view__days__day,
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeStart.react-calendar__month-view__days__day,
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--active.react-calendar__tile--range.react-calendar__month-view__days__day,
+.react-calendar__tile.react-calendar__tile--now.react-calendar__tile--active.react-calendar__tile--range.react-calendar__tile--rangeEnd.react-calendar__month-view__days__day {
+  @apply text-white bg-black;
+}
