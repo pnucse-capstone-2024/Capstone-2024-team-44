@@ -123,12 +123,36 @@ docker compose up -d
 |:--:|:--:|
 |<img width="500" alt="인사이트 1" src="./images/인사이트 1.png">|<img width="500" alt="인사이트 2" src="./images/인사이트 2.png">|
 
-#### □ 영상 </br>
+#### □ 시연 영상 </br>
+- 회원가입 (정보 입력 => 모니터링 할 클라우드의 SSH 정보 검증 및 추가 => OpenAI 키 검증 및 추가) 
+
+https://github.com/user-attachments/assets/b7565570-59dd-4459-b86e-dc59c5bd0f54
+
+</br>
+
+- 로그인 => 로그 요약, 인사이트 => 검색 
+
+https://github.com/user-attachments/assets/9c2ae38d-41b0-4252-9841-b8a054e96235
+
+</br>
+
+- 클라우드에 SSH 원격으로 명령 내리기
+
+https://github.com/user-attachments/assets/1df00660-5230-4598-88d3-076efc01772e
+
+</br>
+
+- 특정 로그에 대해 챗봇에 질문하기
+
+https://github.com/user-attachments/assets/b23fdeee-924a-478a-9b58-0596aaa2e955
+
+</br>
+
+#### □ 발표 영상 </br>
 <a href="https://www.youtube.com/watch?v=EM1icrt529k&list=PLFUP9jG-TDp-CVdTbHvql-WoADl4gNkKj&index=43">
   <img src="./images/with_play_button.png" alt="프로젝트 소개 영상" width="500"/>
 </a>
 </br></br>
-
 
 ### 5. 팀 소개
 
